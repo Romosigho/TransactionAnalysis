@@ -1,0 +1,34 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2,0,dtd">
+
+<struts>
+	<package name = "p" extends = "struts-default" namespace="/">
+	
+	<action name="signupAction" class = "p.Signup" method ="processSignup">
+		<result>login.jsp</result>
+		<result>signup.jsp</result>
+		<result name = "signup">/signup.jsp</result>
+		<result name = "login">/login.jsp</result>
+	</action>
+	
+	<action name="loginAction" class = "p.Login" method ="processLogin">
+		<result>tasks.jsp</result>
+		<result>login.jsp</result>
+		<result name = "login">/login.jsp</result>
+		<result name = "tasks">/tasks.html</result>
+	</action>
+	
+	<action name="fileAction" class = "p.ProcessFile" method ="execute">
+            <interceptor-ref name="defaultStack">
+       		<param name="allowedTypes">application/csv,application/x-csv,text/x-comma-separated-values</param>
+       		</interceptor-ref>
+			<result>results.jsp</result>
+			<result>fileup.jsp</result>
+			<result>transactions.jsp</result>
+		<result name="success">/results.jsp</result>  
+		<result name="input">/fileup.jsp</result>
+		<result name="done">/transactions.jsp</result>
+	</action>
+	</package>
+</struts>
