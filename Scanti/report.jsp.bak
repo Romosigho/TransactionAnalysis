@@ -249,7 +249,7 @@ e10.printStackTrace();
 </table>
 <hr>
 <div class="parent_div">
-<center><a href="downloadrep.jsp"><button class="button-m" role="button"><h4>Download Results</button></a></h4></center>
+<center><a href="downloadrep.jsp"><button class="button-m" role="button"><h4>Download Analysis</button></a></h4></center>
 <div class="parent_div">
 </body>
   </html>
