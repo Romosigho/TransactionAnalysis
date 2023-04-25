@@ -25,23 +25,34 @@ public class Signup extends ActionSupport {
 	public String processSignup() throws Exception {
 		String result = "signup";
 		
-		try {
+		if (getUsername().length() == 0) {
+			addFieldError("username", "Username is required");
+        }
 		
-			//check database
-			         String sql = "INSERT into user (username, password) VALUES (?, ?)";
-			         PreparedStatement createUser = conn().prepareStatement(sql);
-			         createUser.setString(1, username);
-			         createUser.setString(2, password);
-			         int rowsUpdated = createUser.executeUpdate();
-			         result = "login";
+		if (getPassword().length() == 0) {
+            addFieldError("password", getText("Password is required"));
+        }
+		
+		else {
 
-					createUser.close();
-						
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-						
+			try {
+
+				//check database
+				String sql = "INSERT into user (username, password) VALUES (?, ?)";
+				PreparedStatement createUser = conn().prepareStatement(sql);
+				createUser.setString(1, username);
+				createUser.setString(2, password);
+				int rowsUpdated = createUser.executeUpdate();
+				result = "login";
+
+				createUser.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}			
 		return result;	
+		
 	}
 
 

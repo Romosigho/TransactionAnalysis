@@ -24,28 +24,36 @@ public class Login extends ActionSupport {
 	
 	public String processLogin() throws Exception {
 		String result = "login";
-		
-			try {
-			//check database
-		         String sql = "SELECT * FROM user WHERE username = ? AND password = ?";
-		         PreparedStatement ps = conn().prepareStatement(sql);
-		         ps.setString(1, username);
-		         ps.setString(2, password);
-		         ResultSet rs = ps.executeQuery();
 
-		         
-		         result = "tasks";
-		         ps.close();
-		         
-				} catch (Exception e) {
-					e.printStackTrace();
+		if (getUsername().length() == 0) {
+			addFieldError("username", "Username is required");
+		}
+
+		if (getPassword().length() == 0) {
+			addFieldError("password", getText("Password is required"));
+		}
+
+		else {
+			try {
+				//check database
+				String sql = "SELECT * FROM user WHERE username = '"+username+"' AND password = '"+password+"'";
+				PreparedStatement ps = conn().prepareStatement(sql);
+				ResultSet rs = ps.executeQuery();
+				
+				if(rs.next()) {
+					result = "tasks";
 				}
-		            
-			
-			//if username not in database, keep them here
-			//result = "login";
-			//if username is in database, move to tasks page
-			//result = "tasks";
+				
+				else {
+					addFieldError("username", getText("User does not exist in database"));
+				}
+
+				ps.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		return result;	
 	}
 
