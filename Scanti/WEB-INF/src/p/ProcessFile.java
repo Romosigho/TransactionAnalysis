@@ -18,7 +18,6 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
-
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -121,7 +120,7 @@ public class ProcessFile extends ActionSupport {
 			ps4.executeUpdate();
 			
 			//Table 5. For suspicious cards with some of the factors above
-			String check_sql5 = "INSERT into flagged_cards (CardNumber) SELECT DISTINCT frequent_desc.CardNumber as CardNumber FROM frequent_desc INNER JOIN frequent_deposit ON frequent_desc.CardNumber = frequent_deposit.CardNumber INNER JOIN frequent_withdraw ON frequent_deposit.CardNumber = frequent_withdraw.CardNumber INNER JOIN same_date ON frequent_withdraw.CardNumber = same_date.CardNumber";
+			String check_sql5 = "INSERT into flagged_cards (CardNumber) SELECT DISTINCT frequent_desc.CardNumber as CardNumber FROM frequent_desc INNER JOIN frequent_deposit ON frequent_desc.CardNumber = frequent_deposit.CardNumber INNER JOIN frequent_withdraw ON frequent_desc.CardNumber = frequent_withdraw.CardNumber INNER JOIN same_date ON frequent_desc.CardNumber = same_date.CardNumber";
 			PreparedStatement ps5 = conn().prepareStatement(check_sql5);
 			ps5.executeUpdate();
 		}

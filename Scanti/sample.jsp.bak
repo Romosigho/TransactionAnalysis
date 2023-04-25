@@ -23,7 +23,7 @@ File fileDownload = null;
     String home = System.getProperty("user.home");
 	
 	fileDownload = new File(home+"/Downloads/", "HowToUse.txt");
-    url = new URL("http://localhost:8080/Scanti/Guidelines_and_Sample_data.txt");
+    url = new URL("http://localhost:8080/FYP/Guidelines_and_Sample_data.txt");
     con = (HttpURLConnection)url.openConnection();
     try {
         inp = con.getInputStream();

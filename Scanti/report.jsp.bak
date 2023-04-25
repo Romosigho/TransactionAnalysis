@@ -122,7 +122,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar deposited amounts (>1)</h4>
+<h4>Cards with similar deposited amounts that aren't 0.0 (>1)</h4>
 <p>
 
 <table border="1" id="3">
@@ -168,7 +168,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar withdrawn amounts (>1)</h4>
+<h4>Cards with similar withdrawn amounts that aren't 0.0 (>1)</h4>
 <p>
 
 <table border="1" id="4">
@@ -249,7 +249,7 @@ e10.printStackTrace();
 </table>
 <hr>
 <div class="parent_div">
-<center><a href="downloadrep.jsp"><button class="button-m" role="button"><h4>Download Analysis</button></a></h4></center>
+<center><a href="downloadrep.jsp"><button class="button-m" role="button"><h4>Download Results</button></a></h4></center>
 <div class="parent_div">
 </body>
   </html>

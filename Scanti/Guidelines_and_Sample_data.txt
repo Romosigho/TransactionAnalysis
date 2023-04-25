@@ -16,7 +16,7 @@
 
 * Thank you!
 
-* Sample data below:
+* Sample data:
 
 
 508000362925,03-Mar-19,FDRL/INTERNAL FUND TRANSFE,06-Mar-19,0.0,150.0,4850.00 

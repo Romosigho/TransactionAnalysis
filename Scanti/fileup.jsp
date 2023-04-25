@@ -12,7 +12,7 @@
 <br>
 <hr>
 <div align="center">
-<h3>Upload a CSV File (25mb max)</h3>
+<h3>Upload a CSV/Text File (25mb max)</h3>
 <b><h4> FILES MUST BE UPLOADED USING A SPECIFIC FORMAT</h4></b>
 <b><h4> DOWNLOAD AND READ THROUGH USER GUIDE FILE BELOW BEFORE USE</h4></b>
 <P>

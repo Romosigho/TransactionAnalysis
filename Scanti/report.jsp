@@ -122,7 +122,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar deposited amounts (>1)</h4>
+<h4>Cards with similar deposited amounts that aren't 0.0 (>1)</h4>
 <p>
 
 <table border="1" id="3">
@@ -168,7 +168,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar withdrawn amounts (>1)</h4>
+<h4>Cards with similar withdrawn amounts that aren't 0.0 (>1)</h4>
 <p>
 
 <table border="1" id="4">
