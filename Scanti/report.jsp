@@ -8,7 +8,7 @@
   <%@page import="java.sql.Statement"%>
   <%@page import="java.sql.Connection"%>
     <meta charset="UTF-8">
-    <title>Transaction Analysis Tool</title>
+    <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -29,6 +29,7 @@
     Statement statement = null;
     ResultSet resultSet = null;
   %> 
+  <img src = "Scanti3.png" width="175" height="150">
 <h1>Analysis Results</h1>
 <hr>
 <p>
@@ -92,7 +93,7 @@ try
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select * from frequent_deposit where Deposit NOT LIKE '0_%'";
+String sql ="select * from frequent_deposit where Deposit NOT LIKE '0.0' AND Deposit NOT LIKE '€0.0'";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -138,7 +139,7 @@ try
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select * from frequent_withdraw where Withdrawal NOT LIKE '0_%'";
+String sql ="select * from frequent_withdraw where Withdrawal NOT LIKE '0.0' AND Withdrawal NOT LIKE '€0.0'";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -245,7 +246,7 @@ e10.printStackTrace();
 }
 %>
 <hr>
-<h4>Flagged cards with all of the factors above</h4>
+<h4>Cards flagged with suspicious activity (>2)</h4>
 </table>
 <hr>
 <div class="parent_div">

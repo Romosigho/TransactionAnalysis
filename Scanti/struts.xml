@@ -20,8 +20,8 @@
 	</action>
 	
 	<action name="fileAction" class = "p.ProcessFile" method ="execute">
-            <interceptor-ref name="defaultStack">
-       		<param name="allowedTypes">application/csv,application/x-csv,text/x-comma-separated-values</param>
+            <interceptor-ref name="fileUpload">
+       		<param name="fileUpload.allowedTypes">application/csv,application/x-csv,text/x-comma-separated-values</param>
        		</interceptor-ref>
 			<result>results.jsp</result>
 			<result>fileup.jsp</result>

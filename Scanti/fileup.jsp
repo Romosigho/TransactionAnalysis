@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="contentType" content="text/html"; charset="UTF-8">
-    <title>Transaction Analysis Tool</title>
+    <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
 <body>
@@ -20,7 +20,7 @@
   <s:form 
     action="fileAction" method="post" enctype="multipart/form-data">
 
-      <s:file name="fileUpload" label="File"/>
+      <s:file name="fileUpload" accept=".csv,text/csv,.txt" label="File"/>
       <s:submit value="Submit" align="center"></s:submit>
 
   </s:form>

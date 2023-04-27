@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta http-equiv="contentType" content="text/html"; charset="UTF-8">
-    <title>Transaction Analysis Tool</title>
+    <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
 <body>
 <br>
+<img src = "Scanti3.png" width="175" height="150">
 <h1>Login as Existing User</h1>
 <br>
 <hr>

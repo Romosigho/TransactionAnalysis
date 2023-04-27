@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="contentType" content="text/html"; charset="UTF-8">
-    <title>Transaction Analysis Tool</title>
+    <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
 
