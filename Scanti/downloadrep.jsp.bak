@@ -13,10 +13,12 @@
   <%@page import="java.sql.ResultSet"%>
   <%@page import="java.sql.Statement"%>
   <%@page import="java.sql.Connection"%>
+  <%@page import="java.time.LocalDateTime"%>
+  <%@page import="java.time.format.DateTimeFormatter"%>
   
   
     <meta http-equiv="contentType" content="text/html"; charset="UTF-8">
-    <title>Transaction Analysis Tool</title>
+    <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
 <body>
@@ -54,7 +56,9 @@ HtmlConverter htmlConverter1 = null;
 %>
 <%
 try {
-				htmlConverter1.convertToPdf(fileInHtml, new File(home+"/Downloads/", "Analysis.pdf"));
+	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH.mm.ss");  
+   LocalDateTime now = LocalDateTime.now(); 
+				htmlConverter1.convertToPdf(fileInHtml, new File(home+"/Downloads/", "Analysis ("+dtf.format(now)+").pdf"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -90,12 +94,12 @@ try{
 	String sql4 ="drop table frequent_withdraw";
 	String sql5 ="drop table same_date";
 	String sql6 ="drop table flagged_cards";
-	String sql7 ="create table transactions(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12), Date varchar(9), Description varchar(255), DateOfCompletion varchar(9), Withdrawal varchar(255), Deposit varchar(255), Balance varchar(255))";
-	String sql8 ="create table frequent_desc(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12), Description varchar(255), Count varchar(255))";
-	String sql9 ="create table frequent_deposit(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12), Deposit varchar(255), Count varchar(255))";
-	String sql10 ="create table frequent_withdraw(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12), Withdrawal varchar(255), Count varchar(255))";
-	String sql11 ="create table same_date(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12), Date varchar(9), Count varchar(255))";
-	String sql12 ="create table flagged_cards(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(12))";
+	String sql7 ="create table transactions(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20), Date varchar(9), Description varchar(255), DateOfCompletion varchar(9), Withdrawal varchar(255), Deposit varchar(255), Balance varchar(255))";
+	String sql8 ="create table frequent_desc(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20), Description varchar(255), Count varchar(255))";
+	String sql9 ="create table frequent_deposit(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20), Deposit varchar(255), Count varchar(255))";
+	String sql10 ="create table frequent_withdraw(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20), Withdrawal varchar(255), Count varchar(255))";
+	String sql11 ="create table same_date(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20), Date varchar(9), Count varchar(255))";
+	String sql12 ="create table flagged_cards(ID INT PRIMARY KEY AUTO_INCREMENT, CardNumber varchar(20))";
 	
 	statement.addBatch(sql1);
     statement.addBatch(sql2);
@@ -123,7 +127,7 @@ e1.printStackTrace();
 <h4>Analysis downloaded.</h4>
 <hr>
 
-<a href="fileup.jsp"> <button class="button-m" role="button">Go Back</button></a>
+<a href="tasks.html"> <button class="button-m" role="button">Go Back</button></a>
 </body>
 <style>
 .green {

@@ -10,19 +10,19 @@
   Date-of-Transaction-Completion = Date when the transaction was completed
   Withdrawal-Amount = Amount withdrawn
   Deposit-Amount = Amount deposited
-  Balance-Amount = Account balance (make this equal to 0.0 if not applicable)
+  Balance-Amount = Account balance (make fields 0.0 if not applicable)
 
 * "Card-Number" can be max 20 characters long. 
 
-* "Date" and "Date-Of-Transaction-Completion" MUST be 9 characters long + in "DD-MON-YY" format.
+* "Date" and "Date-Of-Transaction-Completion" MUST be 9 characters long and MUST be in "DD-MON-YY" format.
 
 * All rows MUST be separated with "," for the algorithm to function correctly.
+
+* Euro Signs '€' may be used where appropriate, but are not advised, as the system does not recognize special characters.
 
 * Formatting MUST be consistent.
 
 * Feel free to use the sample data below to test the program. You can do this by deleting everything that starts with "*"
-
-* Thank you!
 
 * Sample data:
 

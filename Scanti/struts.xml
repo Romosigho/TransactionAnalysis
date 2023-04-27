@@ -25,10 +25,8 @@
        		</interceptor-ref>
 			<result>results.jsp</result>
 			<result>fileup.jsp</result>
-			<result>transactions.jsp</result>
 		<result name="success">/results.jsp</result>  
 		<result name="input">/fileup.jsp</result>
-		<result name="done">/transactions.jsp</result>
 	</action>
 	</package>
 </struts>

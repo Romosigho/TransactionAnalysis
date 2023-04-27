@@ -14,6 +14,7 @@
 <hr>
 
 <a href="report.jsp"> <button class="button-m" role="button">Get Analysis</button></a>
+<a href="tasks.html"> <button class="button-m" role="button">Go Back</button></a>
 </body>
 <style>
 .green {

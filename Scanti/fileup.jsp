@@ -26,11 +26,18 @@
   </s:form>
   
 </div>
+<p>
 <hr>
+<p>
 <div align="center">
 <a href="sample.jsp"><button class="button-m" role="button"><h4><center>Download User Guide</button></a></center></h4>
 </div>
+<p>
 <hr>
+<p>
+<div align="center">
+<a href="tasks.html"> <button class="button-m" role="button">Go Back</button></a>
+</div>
 
 </body>
 </html>
