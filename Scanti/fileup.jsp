@@ -8,13 +8,13 @@
   </head>
 <body>
 <br>
-<h1>New Transaction</h1>
+<h1 style="color:white;">New Transaction</h1>
 <br>
 <hr>
 <div align="center">
-<h3>Upload a CSV/Text File (25mb max)</h3>
-<b><h4> FILES MUST BE UPLOADED USING A SPECIFIC FORMAT</h4></b>
-<b><h4> DOWNLOAD AND READ THROUGH USER GUIDE FILE BELOW BEFORE USE</h4></b>
+<h3 style="color:white;">Upload a CSV/Text File (25mb max)</h3>
+<h4 style="color:white;"> FILES MUST BE UPLOADED USING A SPECIFIC FORMAT</h4>
+<h4 style="color:white;"> DOWNLOAD AND READ THROUGH USER GUIDE FILE BELOW BEFORE USE</h4>
 <P>
 <hr>
   <s:form 

@@ -124,7 +124,7 @@ e1.printStackTrace();
 
 <div align="center" class="green">
 <hr>
-<h3>Analysis downloaded.</h3>
+<h3 style="color:white;">Analysis downloaded.</h3>
 <hr>
 
 <a href="tasks.html"> <button class="button-m" role="button">Go Back</button></a>

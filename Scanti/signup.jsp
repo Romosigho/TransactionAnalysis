@@ -10,11 +10,11 @@
 <body>
 <br>
 <img src = "Scanti3.png" width="175" height="150">
-<h1>Sign up as New User</h1>
+<h1 style="color:white;">Sign up as New User</h1>
 <br>
 <hr>
   
-<s:form action="signupAction">  
+<s:form action="signupAction" autocomplete="off">  
 <s:textfield name="username" label="Username"></s:textfield>  
 <s:password name="password" label="Password"></s:password>  
   

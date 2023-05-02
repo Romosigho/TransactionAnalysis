@@ -10,10 +10,10 @@
 <body>
 <br>
 <img src = "Scanti3.png" width="175" height="150">
-<h1>Login as Existing User</h1>
+<h1 style="color:white;">Login as Existing User</h1>
 <br>
 <hr>
-<s:form action="loginAction">  
+<s:form action="loginAction" autocomplete="off">  
 <s:textfield name="username" label="Username"></s:textfield>  
 <s:password name="password" label="Password"></s:password>  
   

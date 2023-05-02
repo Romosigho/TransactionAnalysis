@@ -10,7 +10,7 @@
 <body>
 <div align="center" class="green">
 <hr>
-<h3>Your file was uploaded successfully.</h3>
+<h3 style="color:white;">Your file was uploaded successfully.</h3>
 <hr>
 
 <a href="report.jsp"> <button class="button-m" role="button">Get Analysis</button></a>

@@ -77,7 +77,7 @@ try
     resultSet = null;
   %> 
 
-<h4>Cards with multiple transactions to the same address/with the same description (>1)</h4>
+<h4>Cards with multiple transactions to the same address/with the same description (>1)</h4> 
 <p>
 
 <table border="1" id="2">
@@ -88,7 +88,7 @@ try
 <td>Count</td>
 
 </tr>
-
+<h4>Why is this important? Read more <a href="https://www.tookitaki.com/compliance_hub/what-is-credit-card-money-laundering-and-its-schemes">here</a></h4>
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -134,7 +134,7 @@ try
 <td>Count</td>
 
 </tr>
-
+<h4>Why are similar deposited amounts important? Read more <a href="https://fiubelize.org/types-of-suspicious-activities-or-transactions/">here</a></h4>
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -180,6 +180,7 @@ try
 <td>Count</td>
 
 </tr>
+<h4>Why are similar withdrawn amounts important? Read more <a href="https://fiubelize.org/types-of-suspicious-activities-or-transactions/">here</a></h4>
 <p>
 <%
 try{
@@ -224,7 +225,7 @@ try
 <td>Card Number</td>
 
 </tr>
-
+<h4>Why are same date transactions important? Read more <a href="https://www.linkedin.com/pulse/red-flags-money-laundering-fatf-muhammad-ali?trk=read_related_article-card_title">here</a></h4>
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
