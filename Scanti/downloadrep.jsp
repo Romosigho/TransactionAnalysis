@@ -113,7 +113,6 @@ try{
 	statement.addBatch(sql10);
 	statement.addBatch(sql11);
 	statement.addBatch(sql12);
- 
 
     statement.executeBatch();
 

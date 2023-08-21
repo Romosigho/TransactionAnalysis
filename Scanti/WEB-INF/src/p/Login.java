@@ -41,7 +41,7 @@ public class Login extends ActionSupport {
 				ResultSet rs = ps.executeQuery();
 				
 				if(rs.next()) {
-					result = "tasks";
+					result = "au";
 				}
 				
 				else {

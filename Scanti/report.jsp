@@ -7,6 +7,7 @@
   <%@page import="java.sql.ResultSet"%>
   <%@page import="java.sql.Statement"%>
   <%@page import="java.sql.Connection"%>
+  
     <meta charset="UTF-8">
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
@@ -28,9 +29,10 @@
 	Connection connection = null;
     Statement statement = null;
     ResultSet resultSet = null;
+	int n=0, Description=0, Deposit=0, WithD=0, SameDate=0;
   %> 
   <img src = "Scanti3.png" width="175" height="150">
-<h1>Analysis Results</h1>
+<h1><center>Analysis Results<center></h1>
 <hr>
 <p>
 
@@ -86,9 +88,8 @@ try
 <td>Card Number</td>
 <td>Deposit</td>
 <td>Count</td>
-
 </tr>
-<h4>Why is this important? Read more <a href="https://www.tookitaki.com/compliance_hub/what-is-credit-card-money-laundering-and-its-schemes">here</a></h4>
+
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -134,7 +135,7 @@ try
 <td>Count</td>
 
 </tr>
-<h4>Why are similar deposited amounts important? Read more <a href="https://fiubelize.org/types-of-suspicious-activities-or-transactions/">here</a></h4>
+
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -180,7 +181,7 @@ try
 <td>Count</td>
 
 </tr>
-<h4>Why are similar withdrawn amounts important? Read more <a href="https://fiubelize.org/types-of-suspicious-activities-or-transactions/">here</a></h4>
+
 <p>
 <%
 try{
@@ -225,7 +226,7 @@ try
 <td>Card Number</td>
 
 </tr>
-<h4>Why are same date transactions important? Read more <a href="https://www.linkedin.com/pulse/red-flags-money-laundering-fatf-muhammad-ali?trk=read_related_article-card_title">here</a></h4>
+
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -249,9 +250,15 @@ e10.printStackTrace();
 <hr>
 <h4>Cards flagged with suspicious activity (>2)</h4>
 </table>
+
 <hr>
+<br>
+<a href="analytics.jsp"><button class="button-m" role="button"><h4>View Analytics</button></a></h4>
+<br>
+<p>
+
 <div class="parent_div">
 <center><a href="downloadrep.jsp"><button class="button-m" role="button"><h4>Download Results</button></a></h4></center>
-<div class="parent_div">
+</div>
 </body>
   </html>
