@@ -23,6 +23,14 @@
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h3 {
+		text-shadow: 2px 2px #000C66;
+	}
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
 <body>
 <br>
 <img src = "Scanti3.png" width="175" height="150">
@@ -30,9 +38,9 @@
 	
 <br>
 <hr>
-<h4 style="color:white;">Scan the following code into Google Authenticator:</h4>
+<h3 style="color:white;">Scan the following code into Google Authenticator:</h4>
 <img src = "test.png" width="200" height="200">
-<h4 style="color:white;">Once you do this, enter your generated code into the "Authenticator Code" field above.</h4>
+<h3 style="color:white;">Once you do this, enter your generated code into the "Authenticator Code" field above.</h4>
 <p>
 <s:form action="authAction" autocomplete="off">  
 <s:textfield name="authenticator1" label="Authenticator Code"></s:textfield> 

@@ -21,6 +21,11 @@
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+   <style>
+	h2 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
 <body>
 <%   
 URL url = null;
@@ -123,7 +128,7 @@ e1.printStackTrace();
 
 <div align="center" class="green">
 <hr>
-<h3 style="color:white;">Analysis downloaded.</h3>
+<h2 style="color:white;">Analysis downloaded.</h2>
 <hr>
 
 <a href="tasks.html"> <button class="button-m" role="button">Go Back</button></a>

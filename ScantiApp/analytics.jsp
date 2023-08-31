@@ -12,6 +12,15 @@
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h3 {
+		text-shadow: 2px 2px #000C66;
+	}
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
+	tr:hover {background-color: #D6EEEE;}
+	</style>
   <body>
 	<%
     String driver = "com.mysql.jdbc.Driver";
@@ -32,15 +41,15 @@
 	int n=0, Description=0, Deposit=0, WithD=0, SameDate=0;
   %> 
   <img src = "Scanti3.png" width="175" height="150">
-<h1><center>Your Scan Analytics<center></h1>
+<h1 style="color:white;"><center>Your Scan Analytics<center></h1>
 <hr>
-<h4>Card Appearances & Activity</h4>
+<h3 style="color:white;">Card Appearances & Activity</h3>
 <form class="form-inline" method="post" action="graphs.jsp">
     <button type="submit" name="save" class="btn btn-primary">View Charts</button>
 </form>
 <hr>
 
-<h4>Total Number of Unique Credit Cards Uploaded</h4>
+<h3 style="color:white;">Total Number of Unique Credit Cards Uploaded</h3>
 <table border="1" id="7">
 <tr>
 <td>Credit Cards</td>
@@ -70,8 +79,8 @@ e10.printStackTrace();
 <hr>
 <p>
 
-<h4>General Probability of Credit Card appearances in each class</h4>
-<h4>(1.0 = 100% of unique credit cards)</h4>
+<h3 style="color:white;">General Probability of Credit Card appearances in each class</h3>
+<h3 style="color:white;">(1.0 = 100% of unique credit cards)</h3>
 <table border="1" id="6">
 <tr>
 <td>Same Description (>1)</td>
@@ -157,14 +166,14 @@ e11.printStackTrace();
 <hr>
 
 <p>
-<h4>Search for a Transaction</h4>
+<h3 style="color:white;">Search for a Transaction</h3>
 <p>
 <form class="form-inline" method="post" action="searchresults.jsp">
-    <input type="text" name="CardNumberS" class="form-control" placeholder="Card Number">
-	<input type="text" name="DateOfS" class="form-control" placeholder="Date">
-	<input type="text" name="DescriptionS" class="form-control" placeholder="Description">
+    <input type="text" name="CardNumberS" class="form-control" placeholder="Card Number" autocomplete="off">
+	<input type="text" name="DateOfS" class="form-control" placeholder="Date" autocomplete="off">
+	<input type="text" name="DescriptionS" class="form-control" placeholder="Description" autocomplete="off">
 	<p>
-    <button type="submit" name="save" class="btn btn-primary">Search</button>
+    <input type="submit" value="Search">
 </form>
 
 <br>

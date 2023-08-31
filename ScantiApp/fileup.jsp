@@ -6,6 +6,14 @@
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h3 {
+		text-shadow: 2px 2px #000C66;
+	}
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
 <body>
 <br>
 <h1 style="color:white;">New Transaction</h1>
@@ -13,8 +21,8 @@
 <hr>
 <div align="center">
 <h3 style="color:white;">Upload a CSV/Text File (25mb max)</h3>
-<h4 style="color:white;"> FILES MUST BE UPLOADED USING A SPECIFIC FORMAT</h4>
-<h4 style="color:white;"> DOWNLOAD AND READ THROUGH USER GUIDE FILE BELOW BEFORE USE</h4>
+<h3 style="color:white;"> FILES MUST BE UPLOADED USING A SPECIFIC FORMAT</h4>
+<h3 style="color:white;"> DOWNLOAD AND READ THROUGH USER GUIDE FILE BELOW BEFORE USE</h4>
 <P>
 <hr>
   <s:form action="fileInput" method="post" enctype="multipart/form-data">

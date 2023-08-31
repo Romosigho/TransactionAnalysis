@@ -12,6 +12,12 @@
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
+	tr:hover {background-color: #D6EEEE;}
+	</style>
   <body>
 	<%
     String driver = "com.mysql.jdbc.Driver";
@@ -32,7 +38,7 @@
 	int n=0, Description=0, Deposit=0, WithD=0, SameDate=0;
   %> 
   <img src = "Scanti3.png" width="175" height="150">
-<h1><center>Analysis Results<center></h1>
+<h1 style="color:white;"><center>Analysis Results<center></h1>
 <hr>
 <p>
 
@@ -79,7 +85,7 @@ try
     resultSet = null;
   %> 
 
-<h4>Cards with multiple transactions to the same address/with the same description (>1)</h4> 
+<h3>Cards with multiple transactions to the same address/with the same description (>1)</h3> 
 <p>
 
 <table border="1" id="2">
@@ -124,7 +130,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar deposited amounts that aren't 0.0 (>1)</h4>
+<h3>Cards with similar deposited amounts that aren't 0.0 (>1)</h3>
 <p>
 
 <table border="1" id="3">
@@ -170,7 +176,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with similar withdrawn amounts that aren't 0.0 (>1)</h4>
+<h3>Cards with similar withdrawn amounts that aren't 0.0 (>1)</h3>
 <p>
 
 <table border="1" id="4">
@@ -217,7 +223,7 @@ try
     resultSet = null;
 %>
 <hr> 
-<h4>Cards with same start date transactions (>1)</h4>
+<h3>Cards with same start date transactions (>1)</h3>
 <p>
 
 <table border="1" id="5">
@@ -248,7 +254,7 @@ e10.printStackTrace();
 }
 %>
 <hr>
-<h4>Cards flagged with suspicious activity (>2)</h4>
+<h3>Cards flagged with suspicious activity (>2)</h3>
 </table>
 
 <hr>

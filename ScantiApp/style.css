@@ -59,4 +59,12 @@ width: 100%;
 .parent_div input {
 margin: auto;
 }
+
+.h1 {
+  text-shadow: 2px 2px #ff0000;
+}
+
+.h4 {
+  text-shadow: 2px 2px #ff0000;
+}
 }

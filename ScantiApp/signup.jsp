@@ -3,6 +3,14 @@
 <%@ taglib uri="/struts-tags" prefix="s" %>  
 <html>
   <head>
+   <style>
+	h4 {
+		text-shadow: 2px 2px #000C66;
+	}
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
     <meta http-equiv="contentType" content="text/html"; charset="UTF-8">
     <title>SCANTI - Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
