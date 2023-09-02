@@ -254,13 +254,12 @@ e10.printStackTrace();
 }
 %>
 <hr>
-<h3>Cards flagged with suspicious activity (>2)</h3>
+<h3>Possible anomalies detected (>2)</h3>
 </table>
 
 <hr>
 <br>
-<p>
-<a href="analytics.jsp"><button class="button-m" role="button">View Analytics</button></a>
+<a href="analytics.jsp"><button class="button-m" role="button"><h4>View Analytics</button></h4></a>
 <br>
 <p>
 

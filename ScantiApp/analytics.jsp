@@ -43,13 +43,13 @@
   <img src = "Scanti3.png" width="175" height="150">
 <h1 style="color:white;"><center>Your Scan Analytics<center></h1>
 <hr>
-<h3 style="color:white;">Card Appearances & Activity</h3>
+<h3 style="color:white;">Card Appearances & Activity within classes</h3>
 <form class="form-inline" method="post" action="graphs.jsp">
     <button type="submit" name="save" class="btn btn-primary">View Charts</button>
 </form>
 <hr>
 
-<h3 style="color:white;">Total Number of Unique Credit Cards Uploaded</h3>
+<h3 style="color:white;">Total Number of Unique Credit Cards uploaded</h3>
 <table border="1" id="7">
 <tr>
 <td>Credit Cards</td>
@@ -154,6 +154,7 @@ int total_flagged = Description+Deposit+WithD+SameDate;
 <td><%=n-WithD + "/" + n +" cards"%></td>
 <td><%=n-SameDate + "/" + n +" cards"%></td>
 </tr>
+</table>
 <%
 }
 connection.close();
@@ -161,10 +162,86 @@ connection.close();
 e11.printStackTrace();
 }
 %>
+<hr>
+<h3 style="color:white;">Average Deposit (>0.0)</h3>
+<p>
+<table border="1" id="1">
+<tr>
+<td>Average Deposit</td>
+</tr>
 
+<%
+try{
+connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+statement=connection.createStatement();
+String sql ="SELECT ROUND(AVG(Deposit), 2) AS average FROM transactions WHERE Deposit <> 0.0;";
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
+<tr>
+<td><%=resultSet.getString("average") %></td>
+
+</tr>
+<%
+}
+connection.close();
+} catch (Exception e2) {
+e2.printStackTrace();
+}
+%>
+<%
+try
+    {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+	} catch (ClassNotFoundException e3) {
+      e3.printStackTrace();
+    }
+	connection = null;
+    statement = null;
+    resultSet = null;
+%> 
 </table>
 <hr>
+<h3 style="color:white;">Average Withdrawal (>0.0)</h3>
+<p>
+<table border="1" id="1">
+<tr>
+<td>Average Withdrawal</td>
+</tr>
 
+<%
+try{
+connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+statement=connection.createStatement();
+String sql ="SELECT ROUND(AVG(Withdrawal), 2) AS average2 FROM transactions WHERE Withdrawal <> 0.0;";
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
+<tr>
+<td><%=resultSet.getString("average2") %></td>
+
+</tr>
+<%
+}
+connection.close();
+} catch (Exception e2) {
+e2.printStackTrace();
+}
+%>
+<%
+try
+    {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+	} catch (ClassNotFoundException e3) {
+      e3.printStackTrace();
+    }
+	connection = null;
+    statement = null;
+    resultSet = null;
+%> 
+</table>
+
+<hr>
 <p>
 <h3 style="color:white;">Search for a Transaction</h3>
 <p>
