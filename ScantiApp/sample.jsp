@@ -12,6 +12,11 @@
     <title>Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h3 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
 <body>
 <%   
 URL url = null;
@@ -47,7 +52,7 @@ File fileDownload = null;
 
 <div align="center" class="green">
 <hr>
-<h4>User guide downloaded.</h4>
+<h3 style="color:white;">User Guide downloaded</h3>
 <hr>
 
 <a href="fileup.jsp"> <button class="button-m" role="button">Go Back</button></a>

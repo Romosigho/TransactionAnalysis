@@ -12,6 +12,11 @@
     <title>Transaction Analysis Tool</title>
 	<link rel="stylesheet" href="./style.css">
   </head>
+  <style>
+	h3 {
+		text-shadow: 2px 2px #000C66;
+	}
+	</style>
 <body>
 <%   
 URL url = null;
@@ -23,7 +28,7 @@ File fileDownload = null;
     String home = System.getProperty("user.home");
 	
 	fileDownload = new File(home+"/Downloads/", "HowToUse.txt");
-    url = new URL("http://localhost:8080/Scanti/Guidelines_and_Sample_data.txt");
+    url = new URL("http://localhost:8080/ScantiApp/Guidelines_and_Sample_data.txt");
     con = (HttpURLConnection)url.openConnection();
     try {
         inp = con.getInputStream();
@@ -47,7 +52,7 @@ File fileDownload = null;
 
 <div align="center" class="green">
 <hr>
-<h4>User guide downloaded.</h4>
+<h3 style="color:white;">User guide downloaded</h3>
 <hr>
 
 <a href="fileup.jsp"> <button class="button-m" role="button">Go Back</button></a>

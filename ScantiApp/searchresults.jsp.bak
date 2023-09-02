@@ -10,9 +10,6 @@
 <title>SCANTI - Transaction Analysis Tool</title>
 <link rel="stylesheet" href="./style.css">
 </head>
-<style>
-	tr:hover {background-color: #D6EEEE;}
-	</style>
 <body>
 <br>
 <img src = "Scanti3.png" width="175" height="150">

@@ -36,8 +36,8 @@
         <param name="fileUpload.allowedTypes">application/csv,application/x-csv,text/x-comma-separated-values</param>
     </interceptor-ref>
 	<interceptor-ref name="params" />
-            <interceptor-ref name="validation" />
-            <interceptor-ref name="workflow" />
+    <interceptor-ref name="validation" />
+    <interceptor-ref name="workflow" />
     <result>/results.jsp</result>
     <result name="input">/fileup.jsp</result>
     </action>
