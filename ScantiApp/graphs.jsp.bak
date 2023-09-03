@@ -13,6 +13,9 @@
   <%@page import="org.jfree.chart.ChartFactory" %>
   <%@page import="org.jfree.chart.ChartUtils" %>
   <%@page import="org.jfree.chart.JFreeChart" %>
+  <%@page import="org.jfree.chart.plot.PiePlot" %>
+   <%@page import="java.text.NumberFormat" %>
+  <%@page import="org.jfree.chart.labels.StandardPieSectionLabelGenerator" %>
   
   
     <meta charset="UTF-8">
@@ -62,8 +65,10 @@
 	
 	JFreeChart chart = ChartFactory.createPieChart("Overall Card Activity", dataset, true, true, false); 
 	int width = 560;    
-    int height = 370;   
-    File pieChart = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\", "Pie_Chart.jpeg");
+    int height = 370;  
+	PiePlot plot = (PiePlot) chart.getPlot();
+	plot.setLegendLabelGenerator(new StandardPieSectionLabelGenerator("{0}, {1}, {2}", NumberFormat.getNumberInstance(), NumberFormat.getPercentInstance()));
+    File pieChart = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\", "Pie_Chart.jpeg");
     ChartUtils.saveChartAsJPEG(pieChart , chart , width , height);
   %>
  <p>
@@ -101,8 +106,10 @@
 	
 	JFreeChart chart2 = ChartFactory.createPieChart("Same Description", dataset2, true, true, false); 
 	int width2 = 560;    
-    int height2 = 370;   
-    File pieChart2 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\", "Chart2.jpeg");
+    int height2 = 370;
+	PiePlot plot = (PiePlot) chart2.getPlot();
+	plot.setLegendLabelGenerator(new StandardPieSectionLabelGenerator("{0}, {1}, {2}", NumberFormat.getNumberInstance(), NumberFormat.getPercentInstance()));
+    File pieChart2 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\", "Chart2.jpeg");
     ChartUtils.saveChartAsJPEG(pieChart2 , chart2 , width2 , height2);
   %> 
   <p>
@@ -141,7 +148,9 @@
 	JFreeChart chart3 = ChartFactory.createPieChart("Same Deposit", dataset3, true, true, false); 
 	int width3 = 560;    
     int height3 = 370;   
-    File pieChart3 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\", "Chart3.jpeg");
+	PiePlot plot = (PiePlot) chart3.getPlot();
+	plot.setLegendLabelGenerator(new StandardPieSectionLabelGenerator("{0}, {1}, {2}", NumberFormat.getNumberInstance(), NumberFormat.getPercentInstance()));
+    File pieChart3 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\", "Chart3.jpeg");
     ChartUtils.saveChartAsJPEG(pieChart3 , chart3 , width3 , height3);
   %> 
   <p>
@@ -179,8 +188,10 @@
 	
 	JFreeChart chart4 = ChartFactory.createPieChart("Same Withdraw", dataset4, true, true, false); 
 	int width4 = 560;    
-    int height4 = 370;   
-    File pieChart4 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\", "Chart4.jpeg");
+    int height4 = 370; 
+	PiePlot plot = (PiePlot) chart4.getPlot();
+	plot.setLegendLabelGenerator(new StandardPieSectionLabelGenerator("{0}, {1}, {2}", NumberFormat.getNumberInstance(), NumberFormat.getPercentInstance()));
+    File pieChart4 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\", "Chart4.jpeg");
     ChartUtils.saveChartAsJPEG(pieChart4 , chart4 , width4 , height4);
   %> 
   <p>
@@ -218,8 +229,10 @@
 	
 	JFreeChart chart5 = ChartFactory.createPieChart("Same Date", dataset5, true, true, false); 
 	int width5 = 560;    
-    int height5 = 370;   
-    File pieChart5 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\", "Chart5.jpeg");
+    int height5 = 370;  
+	PiePlot plot = (PiePlot) chart5.getPlot();
+	plot.setLegendLabelGenerator(new StandardPieSectionLabelGenerator("{0}, {1}, {2}", NumberFormat.getNumberInstance(), NumberFormat.getPercentInstance()));
+    File pieChart5 = new File("C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\", "Chart5.jpeg");
     ChartUtils.saveChartAsJPEG(pieChart5 , chart5 , width5 , height5);
   %> 
   <p>

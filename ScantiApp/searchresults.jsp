@@ -11,12 +11,15 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <style>
+	h1 {
+		text-shadow: 2px 2px #000C66;
+	}
 	tr:hover {background-color: #D6EEEE;}
 	</style>
 <body>
 <br>
 <img src = "Scanti3.png" width="175" height="150">
-<h1>Transaction Analysis Tool</h1> 
+<h1 style="color:white;">Transaction Analysis Tool</h1> 
 <br>
 <br>
 <br>

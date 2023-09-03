@@ -55,34 +55,20 @@ public class TwoFA extends ActionSupport {
 	    }
 	}
 	
-	/*
-	 * public static void createQRCode(String barCodeData) throws WriterException,
-	 * IOException { String filePath =
-	 * "C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\Scanti\\test.png"; int
-	 * height = 200; int width = 200; BitMatrix matrix = new
-	 * MultiFormatWriter().encode(barCodeData, BarcodeFormat.QR_CODE, width,
-	 * height); try (FileOutputStream out = new FileOutputStream(filePath)) {
-	 * MatrixToImageWriter.writeToStream(matrix, "png", out); } }
-	 */
-	
-	public static void infinityGeneratingCodes() {
-		String code = getTOTPCode(hash);
-		String lastCode = null;
-		while (true) {
-			if (!code.equals(lastCode)) {
-				System.out.println(code);
-			}
-			lastCode = code;
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {};
-		}
-	}
+	  public static void createQRCode(String barCodeData) throws WriterException,
+	  IOException { String filePath =
+	  "C:\\Program Files\\apache-tomcat-9.0.68\\webapps\\ScantiApp\\test.png"; int
+	  height = 200; int width = 200; BitMatrix matrix = new
+	  MultiFormatWriter().encode(barCodeData, BarcodeFormat.QR_CODE, width,
+	  height); try (FileOutputStream out = new FileOutputStream(filePath)) {
+	  MatrixToImageWriter.writeToStream(matrix, "png", out); } }
 	
 	public String processAuth() throws Exception {
 		String result = "error";
+		createQRCode(useQR());
 	    
 		if (getAuthenticator1().length() == 0) {
+			//not needed
 			addFieldError("authenticator", "Code cannot be empty");
 		}
 
